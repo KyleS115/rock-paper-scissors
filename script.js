@@ -17,6 +17,13 @@ function getComputerChoice() {
 }
 
 function playRound() {
+    /* Plays a single round of rock paper scissors
+
+    Prompts and the saves the users's choice in lowercase
+    Retrieves and saves the computer's choice in lowercase
+    If the choices are the same, returns a string for the tie scenario
+    If the player wins, returns a string for the win scenario
+    If the player loses, returns a string for the loss scenario */
     playerChoice = prompt("Rock, paper, or scissors?").toLowerCase()
     computerChoice = getComputerChoice().toLowerCase()
     if (playerChoice === computerChoice) {
@@ -29,12 +36,33 @@ function playRound() {
 }
 
 function game() {
+    /* Plays a 5 round game of rock paper scissors
+
+    Sets both the player and computer score at 0
+    Sets the current round to 1 
+    Logs the win condition
+    For every round <= 5,
+        Logs the round number
+        Plays and saves the outcome of a single round
+        Logs the round's outcome
+        If the player wins,
+            Increases the player's score by 1
+            Logs the current scores
+            Increases the round number var by 1
+        If the computer wins,
+            Increases the computer's score by 1
+            Logs the current scores
+            Increases the round number var by 1
+        If theres a tie,
+            Logs that the round doesn't count
+            The round number var remains unchanged
+    Logs the final outcome of the game*/
     let playerScore = 0
     let computerScore = 0
-    let i = 1
+    let currentRound = 1
     console.log("First to five wins!")
-    for (;i <= 5; i++) {
-        console.log("Round: " + i)
+    for (;currentRound <= 5; currentRound++) {
+        console.log("Round: " + currentRound)
         roundOutcome = playRound()
         console.log(roundOutcome)
         if (roundOutcome.slice(0, 8) === "You win!") {
@@ -47,7 +75,7 @@ function game() {
             console.log("Computer's Score: " + computerScore)
         } else {
             console.log("Let's try that again...")
-            i--
+            currentRound--
         }
     }
     if (playerScore > computerScore) {
