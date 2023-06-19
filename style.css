@@ -45,6 +45,8 @@ button {
     width: 30%;
     background-color: lightgrey;
     border: 8px inset white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
 }
 
 #resultscontainer {
