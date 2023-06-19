@@ -37,6 +37,22 @@ function playRound(playerChoice) {
     };
 };
 
+function resetGame() {
+    round = 0;
+    playerScore = 0;
+    computerScore = 0;
+    roundDisplay.innerHTML = 'ROUND: ' + round;
+    playerScoreDisplay.innerHTML = 'PLAYER: ' + playerScore;
+    computerScoreDisplay.innerHTML = 'COMPUTER: ' + computerScore;
+    roundResults.innerHTML = ' ';
+    gameResults.innerHTML = ' ';
+    buttons.forEach((button) => {
+        button.style.border = '8px inset white';
+        button.style.backgroundColor = 'lightgrey';
+    })
+    return;
+}
+
 let round = 0
 let playerScore = 0
 let computerScore = 0
@@ -52,7 +68,7 @@ const roundDisplay = document.getElementById('round');
 const playerScoreDisplay = document.getElementById('playerscore');
 const computerScoreDisplay = document.getElementById('computerscore');
 
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('#buttonscontainer > button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         if (round <= 4) {

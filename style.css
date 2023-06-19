@@ -39,10 +39,21 @@ body {
     height: 50%;
 }
 
-button {
+button#reset {
+    background-color: lightgrey;
+    aspect-ratio: 2 / 1;
+    height: 5%;
+    border-radius: 15%;
+    border: 4px inset white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+#buttonscontainer > button {
     aspect-ratio: 1 / 1;
     max-width: 200px;
     width: 30%;
+    border-radius: 100%;
     background-color: lightgrey;
     border: 8px inset white;
     font-family: 'Courier New', Courier, monospace;
