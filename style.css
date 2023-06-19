@@ -61,10 +61,6 @@ button#reset {
     text-align: center;
 }
 
-#buttonscontainer > button#scissors {
-    font-size: 70px;
-}
-
 #resultscontainer {
     display: flex;
     flex-direction: column;
