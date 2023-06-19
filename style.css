@@ -57,7 +57,8 @@ button#reset {
     background-color: lightgrey;
     border: 8px inset white;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
+    font-size: 40px;
+    text-align: center;
 }
 
 #resultscontainer {
